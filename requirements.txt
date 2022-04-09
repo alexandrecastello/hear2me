@@ -29,6 +29,11 @@ joblib
 memoized-property
 termcolor
 
+#front end
+flask
+os
+random
+
 #audio
 huggingsound
 nltk
