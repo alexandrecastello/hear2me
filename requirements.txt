@@ -22,8 +22,25 @@ google-cloud-storage
 mlflow
 s3fs
 
+
 # utilities
 six>=1.14
 joblib
 memoized-property
 termcolor
+
+#audio
+huggingsound
+nltk
+pydub
+transformers
+librosa
+
+#gpt3
+openai
+python-dotenv
+googletrans==3.1.0a0
+
+#maybe remove this later
+fastapi
+uvicorn
