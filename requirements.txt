@@ -31,15 +31,12 @@ termcolor
 
 #front end
 flask
-os
-random
 
 #audio
 huggingsound
 nltk
 pydub
 transformers
-librosa
 
 #gpt3
 openai
