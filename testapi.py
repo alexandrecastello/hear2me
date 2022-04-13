@@ -43,7 +43,7 @@ def analyse_audio(audio_file):
     convert_audio(audio_file)
 
     #import and save model
-    #model = load_model()
+    model = load_model()
 
     #transcribe text
     transcribed_text = transcribe(f"{audio_file[:-4]}.wav")
