@@ -6,6 +6,7 @@ COPY preprocessing.py preprocessing.py
 COPY gpt3.py gpt3.py
 COPY requirements.txt /requirements.txt
 COPY .env .env
+COPY senna.ogg senna.ogg
 
 RUN pip install -U pip
 RUN pip install fastapi uvicorn

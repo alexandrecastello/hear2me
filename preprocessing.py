@@ -5,7 +5,7 @@ from pydub import AudioSegment
 def convert_audio(audio):
     sound = AudioSegment.from_ogg(audio)
     sound = sound.set_frame_rate(16000)
-    sound.export("audio.wav", format="wav")
+    sound.export(f"{audio[:-4]}.wav", format="wav")
 
 
 

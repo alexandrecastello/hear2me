@@ -22,12 +22,35 @@ def index():
     return {"greeting": "Hello world"}
 
 
-@app.get("/analyse")
-def analyse(user_text):
+@app.get("/analyse_text")
+def analyse_text(user_text):
     #text analysis pipe
     text = user_text
 
     analysis = text_analysis(text)
+
+    #translate analysis
+    translated_text = translate(analysis)
+
+    return translated_text
+
+
+@app.get("/analyse_audio")
+def analyse_audio(audio_file):
+    #full audio analysis pipe
+
+    #convert audio to wav
+    convert_audio(audio_file)
+
+    #import and save model
+    model = load_model()
+
+    #transcribe text
+    transcribed_text = transcribe(f"{audio_file[:-4]}.wav")
+
+    #analyse text
+    analysis = text_analysis(transcribed_text)
+
 
     #translate analysis
     translated_text = translate(analysis)
