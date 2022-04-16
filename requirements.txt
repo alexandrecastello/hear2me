@@ -29,17 +29,13 @@ joblib
 memoized-property
 termcolor
 
-#front end
-flask
-os
-random
 
 #audio
 huggingsound
 nltk
 pydub
 transformers
-librosa
+urllib
 
 #gpt3
 openai
