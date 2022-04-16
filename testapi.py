@@ -54,8 +54,8 @@ def analyse_audio(audio_file,filename):
     translated_text = translate(analysis)
 
     result = {
-        'Transcribed text': transcribed_text,
-        'Text analysis': translated_text
+        'transcribedText': transcribed_text,
+        'textAnalysis': translated_text
     }
 
     return result
