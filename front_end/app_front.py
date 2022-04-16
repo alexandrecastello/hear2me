@@ -1,4 +1,5 @@
 import os
+from sqlite3 import IntegrityError
 from flask import Flask, render_template, request
 from random import randrange
 
@@ -14,22 +15,29 @@ def index():
 def upload():
     target = os.path.join(APP_ROOT,'audios/')
     print(target)
-
+    ver = True
     if not os.path.isdir(target):
         os.mkdir(target)
 
     for file in request.files.getlist("file"):
-        #import pdb; pdb.set_trace()
+        # import pdb;
         print(file)
         filename=file.filename
-        #pdb.set_trace()
-        namefile=filename.rsplit('.', 1)[0] + '_rand_' + str(randrange(1000000)) + '.' + filename.rsplit('.', 1)[1]
-        #pdb.set_trace()
-        destination = "/".join([target, namefile])
-        print(destination)
-        file.save(destination)
-
-    return render_template("complete.html")
+        # pdb.set_trace()
+        if(filename.rsplit('.', 1)[1] != "ogg"):
+            ver=False
+            break
+        else:
+            namefile=filename.rsplit('.', 1)[0] + '_rand_' + str(randrange(1000000)) + '.' + filename.rsplit('.', 1)[1]
+            #pdb.set_trace()
+            destination = "/".join([target, namefile])
+            print(destination)
+            file.save(destination)
+    print (ver)
+    if(ver==True):
+        return render_template("complete.html")
+    else:
+        return render_template("error_page.html")
 
 if __name__=="__main__":
     app.run(port=4555,debug=True)
