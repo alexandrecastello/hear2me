@@ -25,11 +25,11 @@ def text_analysis(text):
     return answer
 
 
-def translate(text):
+def translate(text, lang='pt'):
     #Function that uses google translator to translate text to portuguese
 
     translator = Translator()
 
-    result = translator.translate(text, dest='pt').text
+    result = translator.translate(text, dest=lang).text
 
     return result
