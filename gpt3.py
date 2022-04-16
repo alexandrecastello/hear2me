@@ -15,7 +15,7 @@ def text_analysis(text):
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=
-        f"Summarize and return the sentiment of the following text:{text}",
+        f"Summarize and return the sentiment of the following text: {text}.",
         temperature=0.7,
         max_tokens=60,
         top_p=1.0,
