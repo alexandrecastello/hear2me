@@ -13,7 +13,7 @@ def full_pipe(file_path,filename):
     model = load_model()
 
     #transcribe text
-    transcribed_text = transcribe(f"path{filename[:-4]}.wav")
+    transcribed_text = transcribe(f"{filename[:-4]}.wav")
 
     #analyse text
     analysis = text_analysis(transcribed_text)

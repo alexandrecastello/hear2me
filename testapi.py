@@ -34,6 +34,7 @@ def analyse_text(user_text):
 
 
 @app.get("/analyse_audio")
+
 def analyse_audio(audio_file,filename):
 
     #full audio analysis pipe
@@ -59,3 +60,4 @@ def analyse_audio(audio_file,filename):
     }
 
     return result
+  

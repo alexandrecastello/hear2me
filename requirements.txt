@@ -29,7 +29,6 @@ joblib
 memoized-property
 termcolor
 
-
 #audio
 huggingsound
 nltk
@@ -42,6 +41,5 @@ openai
 python-dotenv
 googletrans==3.1.0a0
 
-#maybe remove this later
 fastapi
 uvicorn
