@@ -29,20 +29,17 @@ joblib
 memoized-property
 termcolor
 
-#front end
-flask
-
 #audio
 huggingsound
 nltk
 pydub
 transformers
+urllib
 
 #gpt3
 openai
 python-dotenv
 googletrans==3.1.0a0
 
-#maybe remove this later
 fastapi
 uvicorn
