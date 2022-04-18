@@ -22,6 +22,6 @@ def transcribe(audio):
 
     transcription = model.transcribe([audio])
 
-    text = transcription[0]['transcription']
+    text = transcription[0]['transcription'] + '.'
 
     return text

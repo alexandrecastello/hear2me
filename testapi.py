@@ -48,9 +48,12 @@ def analyse_audio(audio_file,filename):
     #transcribe text
     transcribed_text = transcribe(f"{filename[:-4]}.wav")
 
+    transcribed_text=translate(transcribed_text, 'en')
+
     #analyse text
     analysis = text_analysis(transcribed_text)
 
+    transcribed_text = translate(transcribed_text)
     #translate analysis
     translated_text = translate(analysis)
 
@@ -60,4 +63,3 @@ def analyse_audio(audio_file,filename):
     }
 
     return result
-  

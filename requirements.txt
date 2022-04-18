@@ -34,7 +34,6 @@ huggingsound
 nltk
 pydub
 transformers
-urllib
 
 #gpt3
 openai
