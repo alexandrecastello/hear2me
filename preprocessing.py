@@ -10,8 +10,6 @@ def convert_audio(audio_path,filename):
     sound = sound.set_frame_rate(16000)
     sound.export(f"{filename[:-4]}.wav", format="wav")
 
-
-
 def rmv_sw(text):
     #funciton that removes portuguese stopwords from text
 

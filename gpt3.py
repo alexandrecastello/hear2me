@@ -15,7 +15,7 @@ def text_analysis(text):
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=
-        f"Summarize and return the sentiment of the following text:{text}",
+        f"Summarize and return the sentiment of the following text: {text}.",
         temperature=0.7,
         max_tokens=60,
         top_p=1.0,
@@ -25,11 +25,11 @@ def text_analysis(text):
     return answer
 
 
-def translate(text):
+def translate(text, lang='pt'):
     #Function that uses google translator to translate text to portuguese
 
     translator = Translator()
 
-    result = translator.translate(text, dest='pt').text
+    result = translator.translate(text, dest=lang).text
 
     return result
