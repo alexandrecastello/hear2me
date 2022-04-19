@@ -40,13 +40,20 @@ def analyse_audio(audio_file,filename):
     #full audio analysis pipe
 
     #convert audio to wav
-    convert_audio(audio_file,filename)
+    num_files=convert_audio(audio_file,filename)
 
     #import and save model (not needed if model is preloaded)
     #model = load_model()
 
     #transcribe text
-    transcribed_text = transcribe(f"{filename[:-4]}.wav")
+    transcribed_text=""
+    i=1
+    if (num_files>1):
+        for item in range(1,num_files+1):
+            transcribed_text += transcribe(f"{filename[:-4]}_{i}.wav")
+            i+=1
+    else:
+        transcribed_text = transcribe(f"{filename[:-4]}.wav")
 
     transcribed_text=translate(transcribed_text, 'en')
 
