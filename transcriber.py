@@ -6,10 +6,10 @@ def load_model():
 
     #load model
     model = SpeechRecognitionModel(
-        "Edresson/wav2vec2-large-xlsr-coraa-portuguese")
+        "jonatasgrosman/wav2vec2-large-xlsr-53-portuguese")
 
     #save the model to disk
-    filename = 'model.joblib'
+    filename = 'model_j.joblib'
     joblib.dump(model, filename)
     return model
 
@@ -22,6 +22,6 @@ def transcribe(audio):
 
     transcription = model.transcribe([audio])
 
-    text = transcription[0]['transcription']
+    text = transcription[0]['transcription'] + '.'
 
     return text
