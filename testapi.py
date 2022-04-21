@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from transcriber import load_model, transcribe
+# from transcriber import transcribe
+# from transcriber import load_model
 from gpt3 import text_analysis, translate
 from preprocessing import convert_audio
 
@@ -17,20 +18,20 @@ app.add_middleware(
 
 @app.get("/")
 def index():
-    return {"greeting": "Hello world"}
+    return {"Esta API foi desenvolvida por alunos do Bootcamp de Data Science da Le Wagon. :D"}
 
 
-@app.get("/analyse_text")
-def analyse_text(user_text):
-    #text analysis pipe
-    text = user_text
+# @app.get("/analyse_text")
+# def analyse_text(user_text):
+#     #text analysis pipe
+#     text = user_text
 
-    analysis = text_analysis(text)
+#     analysis = text_analysis(text)
 
-    #translate analysis
-    translated_text = translate(analysis)
+#     #translate analysis
+#     translated_text = translate(analysis)
 
-    return translated_text
+#     return translated_text
 
 
 @app.get("/analyse_audio")
@@ -39,21 +40,10 @@ def analyse_audio(audio_file,filename):
 
     #full audio analysis pipe
 
-    #convert audio to wav
-    num_files=convert_audio(audio_file,filename)
+    #convert audio to wav and transcribe
+    transcribed_text, proba = convert_audio(audio_file, filename)
 
-    #import and save model (not needed if model is preloaded)
-    #model = load_model()
-
-    #transcribe text
-    transcribed_text=""
-    i=1
-    if (num_files>1):
-        for item in range(1,num_files+1):
-            transcribed_text += transcribe(f"{filename[:-4]}_{i}.wav")
-            i+=1
-    else:
-        transcribed_text = transcribe(f"{filename[:-4]}.wav")
+    transcribed_text+="."
 
     transcribed_text=translate(transcribed_text, 'en')
 
@@ -61,6 +51,7 @@ def analyse_audio(audio_file,filename):
     analysis = text_analysis(transcribed_text)
 
     transcribed_text = translate(transcribed_text)
+
     #translate analysis
     translated_text = translate(analysis)
 

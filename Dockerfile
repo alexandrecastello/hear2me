@@ -8,7 +8,6 @@ COPY requirements.txt /requirements.txt
 COPY .env .env
 COPY model.joblib model.joblib
 
-
 RUN pip install -U pip
 RUN pip install fastapi uvicorn
 RUN pip install -r requirements.txt

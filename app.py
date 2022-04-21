@@ -6,17 +6,11 @@ from preprocessing import convert_audio
 def full_pipe(file_path,filename):
     #full audio analysis pipe
 
-    #convert audio to wav
-    convert_audio(file_path,filename)
-
-    #import and save model (not needed if model is preloaded)
-    model = load_model()
-
-    #transcribe text
-    transcribed_text = transcribe(f"{filename[:-4]}.wav")
+    #convert audio to wav and transcribe
+    text,proba=convert_audio(file_path,filename)
 
     #analyse text
-    analysis = text_analysis(transcribed_text)
+    analysis = text_analysis(text)
 
     #translate analysis
     translated_text = translate(analysis)
