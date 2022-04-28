@@ -6,7 +6,7 @@ import math
 import joblib
 import os
 from pydub.effects import normalize
-
+import multiprocessing as mp
 
 def convert_audio(audio_path, filename):
     local_file = filename
@@ -14,7 +14,7 @@ def convert_audio(audio_path, filename):
     sound = AudioSegment.from_ogg(local_file)
     sound = sound.set_frame_rate(16000)
     sound = normalize(sound)
-    audiolen = 60
+    audiolen = 30
     i = 0
     text = ""
     probsum = []
@@ -34,7 +34,7 @@ def convert_audio(audio_path, filename):
     else:
         sound[start:end].export(f"{filename[:-4]}.wav", format="wav")
 
-    model = joblib.load('model_j.joblib')
+    model = joblib.load('model.joblib')
 
     i = 0
     if (subitems > 0):
