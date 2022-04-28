@@ -21,17 +21,17 @@ def index():
     return {"Esta API foi desenvolvida por alunos do Bootcamp de Data Science da Le Wagon. :D"}
 
 
-# @app.get("/analyse_text")
-# def analyse_text(user_text):
-#     #text analysis pipe
-#     text = user_text
+@app.get("/analyse_text")
+def analyse_text(user_text):
+    #text analysis pipe
+    text = user_text
 
-#     analysis = text_analysis(text)
+    analysis = text_analysis(text)
 
-#     #translate analysis
-#     translated_text = translate(analysis)
+    #translate analysis
+    translated_text = translate(analysis)
 
-#     return translated_text
+    return translated_text
 
 
 @app.get("/analyse_audio")
