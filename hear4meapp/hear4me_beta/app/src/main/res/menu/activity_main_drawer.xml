@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icons8_home_64_editado"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_audio"
+            android:icon="@drawable/icons8_frequency_64_editado"
+            android:title="@string/menu_audio" />
+        <item
+            android:id="@+id/nav_transcription"
+            android:icon="@drawable/icons8_abc_96_editado"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_premium"
+            android:icon="@drawable/icons8_premium_64_editado"
+            android:title="@string/menu_premium" />
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/icons8_login_96_editado"
+            android:title="@string/menu_login"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/icons8_login_96_editado"
+            android:title="@string/menu_logout"
+            android:visible="false"/>
+
+
+    </group>
+</menu>

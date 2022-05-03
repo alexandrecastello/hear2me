@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "736056353047",
+    "project_id": "hear4me-32abd",
+    "storage_bucket": "hear4me-32abd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736056353047:android:499238ac8b2705092e5752",
+        "android_client_info": {
+          "package_name": "com.lft.hear4me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736056353047-k0nok5131gd6as3lb8hapkr2uro87pvr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9BU1OEvAm2FpeLucxOUIkxn70AvV8unM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "736056353047-k0nok5131gd6as3lb8hapkr2uro87pvr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
