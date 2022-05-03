@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">hear4me</string>
+    <string name="pic">Foto Recebida</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Usuário não logado</string>
+    <string name="nav_header_subtitle">anônimo@anônimo.com</string>
+    <string name="nav_header_desc">Header de Navegação</string>
+    <string name="action_settings">Fale Conosco</string>
+
+    <string name="menu_home">hear4me</string>
+    <string name="menu_audio">Meus Audios</string>
+    <string name="menu_gallery">Minhas Transcrições</string>
+    <string name="menu_premium">Seja Premium!</string>
+    <string name="menu_login">Realize seu login</string>
+    <string name="menu_logout">Realize seu logout</string>
+
+    <string name="title_activity_login">Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in">Realizar Login</string>
+    <string name="action_register">Registrar uma conta</string>
+    <string name="action_sign_in_short">Realizar Login</string>
+    <string name="welcome">"Bem vindo(a)"</string>
+    <string name="invalid_username">O username deverá ser um e-mail válido</string>
+    <string name="valid_username">O username deverá ser um e-mail válido</string>
+    <string name="invalid_password">O password deve conter ao menos 5 caracteres, onde ao menos um deverá ser uma letra maíscula e um deverá ser um caracter especial</string>
+    <string name="login_failed">"Falha no login, tente novamente"</string>
+    <string name="login_success">"Sucesso, login criado, por favor, confirme a conta no e-mail cadastrado"</string>
+    <string name="register_failed">"Falha ao realizar o cadastro, verifique sua conexão com a internet"</string>
+    <string name="already_reg">"O username utilizado já encontra-se cadastrado"</string>
+    <string name="password_confirmation">Os passwords escolhidos não conferem, tente preencher novamente</string>
+    <string name="valid_password">Indique um password contendo ao menos 5 caracteres com pelo menos uma letra maíscula e um caracter especial</string>
+    <string name="user_terms_and_conditions_agreement">Confirmo que li e estou de acordo com os termos e condições da plataforma (OBRIGATÓRIO)</string>
+    <string name="user_account_changes_agreement">Aceito receber notificações sobre a minha conta em meu e-mail cadastrado (OPCIONAL)</string>
+    <string name="user_commercial_contact_agreement">Aceito receber promoções e novidades sobre o aplicativo em meu e-mail cadastrado (OPCIONAL)</string>
+    <string name="terms_and_conditions_error">Você deve aceitar os termos de compromisso para prosseguir com seu cadastro</string>
+    <string name="user_not_verified">Antes de realizar o login, por favor, verifique seu e-mail</string>
+    <string name="cadastrar">Cadastrar usuário</string>
+    <string name="prompt_display_name">Nome de Usuário</string>
+    <string name="user_display_name">Escolha um nome de usuário para exibição no aplicativo</string>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.lft.hear4me.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_audio"
+        android:name="com.lft.hear4me.ui.audio.AudioFragment"
+        android:label="@string/menu_audio"
+        tools:layout="@layout/fragment_audio" />
+
+    <fragment
+        android:id="@+id/nav_transcription"
+        android:name="com.lft.hear4me.ui.transcription.TranscriptionFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_transcription" />
+
+    <fragment
+        android:id="@+id/nav_premium"
+        android:name="com.lft.hear4me.ui.premium.PremiumFragment"
+        android:label="@string/menu_premium"
+        tools:layout="@layout/fragment_premium" />
+
+    <activity
+        android:id="@+id/nav_login"
+        android:name="com.lft.hear4me.ui.login.LoginActivity"
+        android:label="@string/menu_login"
+        tools:layout="@layout/activity_login"
+        android:visible="false"/>
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.lft.hear4me.ui.logout.LogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_logout"
+        android:visible="false"/>
+
+</navigation>
